@@ -2,9 +2,7 @@
 
 #define DATA_SIZE 4
 
-void averageDdata(double data[], int size);
-
-
+double averageDdata(double data[], int size);
 
 int main(void)
 {
@@ -16,17 +14,17 @@ int main(void)
    printf("Original values:\n");
    for (i = 0; i < DATA_SIZE; i++)
    {
-      printf("%d: %.2lf, \n", i, sensorData[i]);
+      printf("%d: %.2lf \n", i, sensorData[i]);
    }
    puts("");
-   printf("Avarage: %.2lf \n", avg);
+   printf("Avarage: %.2lf \n", averageDdata(sensorData, DATA_SIZE));
 
    return 0;
 }
 
-void averageDdata(double data[], int size)
+double averageDdata(double data[], int size)
 {
-    double data0 = 0;
+   double data0 = 0;
    double avg;
 
     for (int i = 0; i < size; i++)
@@ -35,5 +33,12 @@ void averageDdata(double data[], int size)
 
     }
     avg = data0 / size;
+
+    for (int i = 0; i < size; i++)
+    {
+        data[i] = avg;
+    }
+
+    return avg;
 }
 
