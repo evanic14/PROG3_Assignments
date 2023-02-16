@@ -4,7 +4,7 @@
 
 void averageDdata(double data[], int size);
 
-double avg = 0;
+
 
 int main(void)
 {
@@ -27,33 +27,13 @@ int main(void)
 void averageDdata(double data[], int size)
 {
     double data0 = 0;
-    double data1 = 0;
-    double data2 = 0;
-    double data3 = 0;
+   double avg;
 
     for (int i = 0; i < size; i++)
     {
-        if (i == 0)
-        {
-            data0 = data[i];
-        }
-        else if (i == 1)
-        {
-            data1 = data[i];
-        }
-        else if (i == 2)
-        {
-            data2 = data[i];
-        }
-        else if (i == 3)
-        {
-            data3 = data[i];
-        }
-        else
-        {
-            printf("error");
-        }
+        data0 = data0 + data[i];
+
     }
-    avg = (double) (data0 + data1 + data2 + data3) / size;
+    avg = data0 / size;
 }
 

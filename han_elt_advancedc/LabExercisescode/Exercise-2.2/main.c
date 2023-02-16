@@ -1,8 +1,6 @@
 #include <stdio.h>
 // function prototype
 void average2D(double *pD1, double *pD2);
-// global variable
-double avg = 0;
 
 int main(void)
 {
@@ -14,12 +12,16 @@ int main(void)
     // adding d1 and d2 to function
     average2D (&d1 , &d2);
     // printing average value
-    printf ("avg = %lf \n", avg);
+    printf ("avg = %lf \n", d1);
 
     return 0;
 }
 
 void average2D(double *pD1, double *pD2)
 {
+    double avg;
     avg = (double) (*pD1 + *pD2) / 2; // calculating average value
+
+    *pD1 = avg;
+    *pD2 = avg;
 }
