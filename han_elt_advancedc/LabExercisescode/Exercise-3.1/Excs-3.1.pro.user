@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 9.0.1, 2023-02-16T13:29:31. -->
+<!-- Written by QtCreator 9.0.1, 2023-02-17T12:13:36. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -238,6 +238,7 @@
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/emiel/Projects/PROG3_Assignments/han_elt_advancedc/LabExercisescode/Exercise-3.1/Excs-3.1.pro</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/emiel/Projects/PROG3_Assignments/han_elt_advancedc/LabExercisescode/Exercise-3.1/Excs-3.1.pro</value>
+    <value type="QString" key="RunConfiguration.Arguments">10 tekst 12 tekst 24</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
