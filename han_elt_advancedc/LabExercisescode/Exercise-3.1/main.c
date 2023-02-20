@@ -28,21 +28,21 @@ int main(int argc, char* argv[])
     }
     printf("total = %d\n", total);
 
-   return 0;
+    return 0;
 }
 
 bool isInt(const char str[])
 {
-   int i = 0;
-   bool isInteger = true;
-   while (str[i] != '\0')
-   {
-      if (!isdigit(str[i]))
-      {
-         isInteger = false;
-         break;
-      }
-      i++;
-   }
-   return isInteger;
+    int i = 0;
+    bool isInteger = true;
+    while (str[i] != '\0')
+    {
+        if (!isdigit(str[i]))
+        {
+            isInteger = false;
+            break;
+        }
+        i++;
+    }
+    return isInteger;
 }
