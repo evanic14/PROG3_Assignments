@@ -34,7 +34,7 @@ int main(void)
    /* Sorting algorithm: quick sort */
    /* compareData is a function pointer to a callback function */
    /* 4.2 Complete the call to qsort */
-   qsort(zipcodes, SIZE, sizeof(zipcode_t), compareZipcodes);
+   qsort(zipcodes, SIZE, sizeof(zipcode_t), compareZipcode);
 
    printf("-------- Sorted:\n");
    for (int i = 0; i < SIZE; i++)
@@ -53,9 +53,17 @@ int compareInts(int i1, int i2)
    return 0;
 }
 
-
 /* callback function for qsort */
 int compareZipcode(const void *pZC1, const void *pZC2)
 {
-  // add the correct code, inspiration from listing qsort/main.c
+    // add the correct code, inspiration from listing qsort/main.c
+    const zipcode_t *pData1 = (const zipcode_t*)pZC1;
+    const zipcode_t *pData2 = (const zipcode_t*)pZC2;
+
+    if ((pData1->number) == (pData2->number))
+    {
+        return strcmp(pData1->twochars, pData2->twochars);
+    }
+    return compareInts(pData1->number, pData2->number);
+
 }
