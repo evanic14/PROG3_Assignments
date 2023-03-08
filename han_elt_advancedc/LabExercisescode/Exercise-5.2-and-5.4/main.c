@@ -40,6 +40,20 @@ int deepCopy(problem_t *pDestination, const problem_t *pSource)
     * call this function in main() to avoid the problems of
     * a shallow copy.
     */
+    free(&pDestination);
+
+    char *pDestination = (char *)malloc(sizeof(char)+1);
+
+
+    /*• free the allocated memory pointed by the pointer in ∗pDestination (for prevent-
+    ing memory leakage).
+    • do a shallow copy: *pDestination = *pSource;
+    • determine the size of the allocated memory pointed by the string pointer in
+    ∗pSource (string length + 1).
+    • allocate dynamic memory with the determined size and overwrite the string
+    pointer in ∗pDestination with the value returned by malloc().
+    • copy the string pointed by the string pointer in ∗pSource to the location pointed
+    to by the string pointer in ∗pDestination.*/
 
    /* TODO should return an error code if memory allocation fails */
    return 0;
